@@ -31,16 +31,6 @@ const container = {
 };
 
 const Section2 = () => {
-  //   const container = useRef(null);
-  //   const { scrollYProgress } = useScroll({ target: container, offset: ['start end', 'end start'] });
-  //   const y = useTransform(scrollYProgress, [0, 1], [1, 1000]);
-
-  //   useEffect(() => {
-  //     setTimeout(() => {
-  //       setPlayMarquee(true);
-  //     }, 2000);
-  //   }, []);
-
   const containerRef = useRef(null);
   const isInView = useInView(containerRef, { margin: "-100px" });
 

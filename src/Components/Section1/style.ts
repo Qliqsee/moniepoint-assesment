@@ -50,6 +50,8 @@ export const CircularArrowWrapper = styled(motion.div)`
   border: 1px solid ${colors.black};
   display: flex;
   justify-content: center;
+  z-index: 1;
+  cursor: pointer;
 `;
 
 // Image Dec styles
@@ -59,7 +61,7 @@ export const ImageDeckWrapper = styled(motion.div)`
   width: 100vw;
   height: 100vh;
   top: 0;
-  z-index: 1000000;
+  z-index: 1;
   .inner-wrapper {
     position: absolute;
 
