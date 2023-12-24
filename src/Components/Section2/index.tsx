@@ -1,31 +1,59 @@
 import { Box, Stack } from "@mui/material";
-import { motion, AnimatePresence, useScroll, useTransform, animate, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
-import Lenis from "@studio-freight/lenis";
+import { motion, useInView } from "framer-motion";
 import {
   Pill,
-  CircularArrowWrapper,
-  ContentWrapper,
-  InnerWrapper,
   MainWrapper,
   SlidingText,
   CircularWrapper,
   SmallText,
-  TextContent,
   RoundedEdge,
   PlayButtonWrapper,
   GetStartedWrapper,
 } from "./style";
 import Footer from "../Footer";
 import SocialIcons from "../SocialIcons";
-import { ArrowDown, Atom, Butterfly, Fan, Flower, Hourglass, Plant, Play, Plus, Tooth } from "@phosphor-icons/react";
+import { Atom, Fan, Hourglass, Play, Plus, Tooth } from "@phosphor-icons/react";
 import { colors } from "../../styles/colors";
+import { useRef } from "react";
 
 const container = {
   animate: {
     transition: {
       delayChildren: 0.4,
       staggerChildren: 0.1,
+    },
+  },
+};
+const contentWrapper = {
+  animate: {
+    transition: {
+      delayChildren: 0.4,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const GetStartedVariant = {
+  initial: {
+    scale: 0,
+    opacity: 0,
+  },
+  animate: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      duration: 2,
+    },
+  },
+};
+const slidingTextVariant = {
+  initial: {
+    height: 0,
+  },
+  animate: {
+    height: "auto",
+    transition: {
+      duration: 2,
     },
   },
 };
@@ -40,9 +68,11 @@ const Section2 = () => {
       // animate={isInView && "animate"}
       variants={container}
     >
-      <Box>
-        <Stack mb="40px" direction={"row"} spacing={"10px"}>
-          <SlidingText>Revolutionalizing</SlidingText>
+      <motion.div initial={{ y: "100%" }} animate={{ y: 0 }} transition={{ duration: 2 }}>
+        <Stack mb="40px" direction={"row"} justifyContent={"flex-end"} spacing={"10px"}>
+          <SlidingText variants={slidingTextVariant} initial="initial" animate="animate">
+            Revolutionalizing
+          </SlidingText>
           <Box pt="10px">
             <Stack direction={"row"} alignItems={"center"} spacing={"5px"}>
               <CircularWrapper width="18px" height="18px">
@@ -69,7 +99,9 @@ const Section2 = () => {
               <Tooth color={colors.white} weight="thin" size={27} />{" "}
             </CircularWrapper>
           </Stack>
-          <SlidingText>Dental</SlidingText>
+          <SlidingText variants={slidingTextVariant} initial="initial" animate="animate">
+            Dental
+          </SlidingText>
           <Stack direction={"row"} alignItems={"center"} spacing={"-30px"}>
             <CircularWrapper style={{ zIndex: 2 }} width="85px" height="85px" bg={colors.loading_secondary}>
               <img src="image1.jpg" />
@@ -78,11 +110,15 @@ const Section2 = () => {
               <Fan color={colors.loading_secondary} weight="fill" size={80} />{" "}
             </CircularWrapper>
           </Stack>
-          <SlidingText>Care</SlidingText>
+          <SlidingText variants={slidingTextVariant} initial="initial" animate="animate">
+            Care
+          </SlidingText>
         </Stack>
 
         <Stack direction={"row"} alignItems={"center"} spacing={"10px"}>
-          <SlidingText>With technology</SlidingText>
+          <SlidingText variants={slidingTextVariant} initial="initial" animate="animate">
+            With technology
+          </SlidingText>
           <Stack direction={"row"} alignItems={"center"} spacing={"-20px"}>
             <CircularWrapper style={{ zIndex: 3 }} width="50px" height="50px" bg={colors.loading_secondary}>
               <img src="image1.jpg" />
@@ -101,7 +137,16 @@ const Section2 = () => {
             <Plus color={colors.loading_secondary} size={13} />{" "}
           </CircularWrapper>
         </Stack>
-      </Box>
+
+        <GetStartedWrapper variants={GetStartedVariant} initial="initial" animate="animate">
+          <CircularWrapper bg={colors.loading_secondary} width="90%" height="90%">
+            <Box textAlign={"center"} color={"white"}>
+              <Box>Get</Box>
+              <Box>Started</Box>
+            </Box>
+          </CircularWrapper>
+        </GetStartedWrapper>
+      </motion.div>
 
       <RoundedEdge>
         <img src="image1.jpg" />
@@ -111,15 +156,6 @@ const Section2 = () => {
           </CircularWrapper>
         </PlayButtonWrapper>
       </RoundedEdge>
-
-      <GetStartedWrapper>
-        <CircularWrapper bg={colors.loading_secondary} width="90%" height="90%">
-          <Box textAlign={"center"} color={"white"}>
-            <Box>Get</Box>
-            <Box>Started</Box>
-          </Box>
-        </CircularWrapper>
-      </GetStartedWrapper>
 
       <Footer />
       <SocialIcons />
