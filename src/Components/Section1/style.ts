@@ -52,3 +52,45 @@ export const CircularArrowWrapper = styled(motion.div)`
   display: flex;
   justify-content: center;
 `;
+
+// Image Dec styles
+
+export const ImageDeckWrapper = styled(motion.div)`
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: 1000000;
+  .inner-wrapper {
+    position: absolute;
+
+    right: 50%;
+    transform-origin: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+
+    .image-block {
+      position: absolute;
+      &.image-1 {
+        transform: rotate(-29deg);
+      }
+      &.image-2 {
+        transform: rotate(-22deg);
+      }
+      &.image-3 {
+        transform: rotate(-15deg);
+      }
+      &.image-4 {
+        transform: rotate(-8deg);
+      }
+      img {
+        width: 270px;
+        height: 320px;
+        object-fit: cover;
+        border-radius: 20px;
+      }
+    }
+  }
+`;

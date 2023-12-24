@@ -6,21 +6,14 @@ import { CircularArrowWrapper, ContentWrapper, InnerWrapper, MainWrapper, TextCo
 import Footer from "../Footer";
 import SocialIcons from "../SocialIcons";
 import { ArrowDown } from "@phosphor-icons/react";
+import ImageDeck from "./ImageDeck";
 
-const banner = {
+const container = {
   animate: {
     transition: {
       delayChildren: 0.4,
       staggerChildren: 0.1,
     },
-  },
-};
-
-const bounceTransition = {
-  y: {
-    duration: 0.4,
-    yoyo: Infinity,
-    ease: "easeOut",
   },
 };
 
@@ -36,9 +29,10 @@ const Section1 = () => {
   //   }, []);
 
   return (
-    <MainWrapper variants={banner}>
+    <MainWrapper variants={container}>
       <InnerWrapper>
         <ContentWrapper>
+          <ImageDeck />
           <TextContent initial={{ y: 400, rotate: "30deg" }} animate={{ y: 0, rotate: "0deg" }} transition={{ duration: 1 }}>
             OUR ADVANTAGES
           </TextContent>
@@ -56,7 +50,3 @@ const Section1 = () => {
 };
 
 export default Section1;
-
-interface AnimatedLettersProps {
-  title: string;
-}
