@@ -49,9 +49,8 @@ export const Pill = styled(motion.div)`
   padding: 12px 18px;
   font-size: 20px;
   color: rgb(255 89 42 / 50%);
-  display: inline-block;
   border-radius: 40px;
-  height: fit-content;
+  overflow: hidden;
 `;
 
 export const RoundedEdge = styled(motion.div)`
@@ -89,4 +88,16 @@ export const GetStartedWrapper = styled(motion.div)`
   height: 110px;
   margin: auto;
   margin-top: 10px;
+`;
+
+export const AssistanceWrapper = styled(motion.div)`
+  display: flex;
+  width: fit-content;
+  overflow: hidden;
+`;
+
+export const DualAvatar = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 `;
