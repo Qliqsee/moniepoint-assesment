@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import {
   HamburgerLongStroke,
   HamburgerShortStroke,
@@ -13,9 +13,8 @@ import {
   RightWrapper,
   SignUp,
   ToothIconWrapper,
-} from './style';
-import { Tooth } from '@phosphor-icons/react';
-import { Box } from '@mui/material';
+} from "./style";
+import { Tooth } from "@phosphor-icons/react";
 
 const Header = () => {
   return (
@@ -23,22 +22,22 @@ const Header = () => {
       initial={{ opacity: 0, y: -180 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
-        ease: 'easeInOut',
+        ease: "easeInOut",
         duration: 1,
         delay: 0.6,
       }}
     >
-      <InnerWrapper direction={'row'}>
+      <InnerWrapper direction={"row"}>
         <LeftWrapper initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 2.5 }}>
           <Menu>Menu</Menu>
-          <HamburgerWrapper alignItems={'center'} spacing={'2.5px'} justifyContent={'center'}>
+          <HamburgerWrapper alignItems={"center"} spacing={"2.5px"} justifyContent={"center"}>
             <HamburgerShortStroke />
             <HamburgerLongStroke />
             <HamburgerShortStroke />
           </HamburgerWrapper>
         </LeftWrapper>
         <MiddleWrapper initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ duration: 2, delay: 1 }}>
-          <ToothIconWrapper alignItems={'center'} spacing={'3px'} justifyContent={'center'}>
+          <ToothIconWrapper alignItems={"center"} spacing={"3px"} justifyContent={"center"}>
             <Tooth size={16} color="white" />
           </ToothIconWrapper>
           <motion.div initial={{ width: 0 }} animate={{ width: 120, marginLeft: 25 }} transition={{ delay: 2, duration: 2 }}>

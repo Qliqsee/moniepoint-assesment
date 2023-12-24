@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 
 export const MainWrapper = styled(motion.div)`
-  position: fixed;
+  position: absolute;
   right: 100px;
   bottom: 90px;
   display: flex;

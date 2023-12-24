@@ -41,7 +41,10 @@ const Section1 = () => {
       <Footer />
       <SocialIcons />
       <CircularArrowWrapper initial={{ y: 0 }} animate={{ y: 40, transition: { delayChildren: 1, duration: 1 } }}>
-        <motion.span transition={{ duration: 5 }} animate={{ y: [0, 15, 0, 15, 0, 15, 0] }}>
+        <motion.span
+          transition={{ duration: 20 }}
+          animate={{ y: [0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0] }}
+        >
           <ArrowDown weight="thin" size={30} />
         </motion.span>
       </CircularArrowWrapper>

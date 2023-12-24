@@ -8,7 +8,13 @@ const variants = {
 
 const SocialIcons = () => {
   return (
-    <MainWrapper>
+    <MainWrapper
+      transition={{
+        ease: "easeInOut",
+        duration: 1,
+        delay: 0.2,
+      }}
+    >
       <IconWrapper initial="initial" animate="animate" variants={variants}>
         <YoutubeLogo size={20} />
       </IconWrapper>

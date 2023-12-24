@@ -6,13 +6,12 @@ import { colors } from "../../styles/colors";
 export const MainWrapper = styled(motion.div)`
   z-index: 100;
   position: relative;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   z-index: -1;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-y: hidden;
 `;
 
 export const InnerWrapper = styled(Box)`
@@ -93,4 +92,27 @@ export const ImageDeckWrapper = styled(motion.div)`
       }
     }
   }
+`;
+
+export const GrandChild = styled(motion.div)`
+  position: relative;
+  width: 100%;
+  height: 100%;
+`;
+
+export const IconWrapper = styled(Box)`
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: white;
+`;
+export const TextWrapper = styled(Box)`
+  padding: 10px;
+  background-color: white;
+  font-size: 14px;
+  border-radius: 40px;
+  text-transform: capitalize;
 `;

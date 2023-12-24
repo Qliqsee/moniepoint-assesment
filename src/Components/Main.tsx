@@ -1,24 +1,19 @@
-import React, { useEffect } from "react";
 import Header from "./Header";
 import Section1 from "./Section1";
-import Lenis from "@studio-freight/lenis";
 
 const Main = () => {
-  useEffect(() => {
-    const lenis = new Lenis();
-
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
   return (
     <>
       <Header />
-      <Section1 />
-      {/* <Section1 /> */}
+      <section id="section-1">
+        <Section1 />
+      </section>
+      <section id="section-2">
+        <Section1 />
+      </section>
+      <section id="section-3">
+        <Section1 />
+      </section>
     </>
   );
 };

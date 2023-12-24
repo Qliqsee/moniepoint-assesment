@@ -8,7 +8,7 @@ const Footer = () => {
       transition={{
         ease: "easeInOut",
         duration: 1,
-        delay: 0.6,
+        delay: 0.1,
       }}
     >
       <InnerWrapper direction={"row"}>
