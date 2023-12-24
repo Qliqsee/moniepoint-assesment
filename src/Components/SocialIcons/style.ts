@@ -1,10 +1,10 @@
-import styled from '@emotion/styled';
-import { motion } from 'framer-motion';
+import styled from "@emotion/styled";
+import { motion } from "framer-motion";
 
 export const MainWrapper = styled(motion.div)`
   position: fixed;
   right: 100px;
-  bottom: 110px;
+  bottom: 90px;
   display: flex;
   justify-content: center;
   align-items: center;

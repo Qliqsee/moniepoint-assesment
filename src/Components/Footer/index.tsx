@@ -1,4 +1,4 @@
-import { Dot, DotText, InnerWrapper, LeftWrapper, MainWrapper, RightWrapper } from './style';
+import { Dot, DotText, InnerWrapper, LeftWrapper, MainWrapper, RightWrapper } from "./style";
 
 const Footer = () => {
   return (
@@ -6,12 +6,12 @@ const Footer = () => {
       initial={{ opacity: 0, y: 180 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
-        ease: 'easeInOut',
+        ease: "easeInOut",
         duration: 1,
         delay: 0.6,
       }}
     >
-      <InnerWrapper direction={'row'}>
+      <InnerWrapper direction={"row"}>
         <LeftWrapper initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 2.5 }}>
           <Dot />
           <DotText>Your Smile, Our Passion</DotText>

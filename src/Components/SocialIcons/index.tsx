@@ -1,9 +1,9 @@
-import { IconWrapper, MainWrapper } from './style';
-import { FacebookLogo, InstagramLogo, YoutubeLogo } from '@phosphor-icons/react';
+import { IconWrapper, MainWrapper } from "./style";
+import { FacebookLogo, InstagramLogo, YoutubeLogo } from "@phosphor-icons/react";
 
 const variants = {
-  initial: { scale: 0, rotate: '-50deg', transition: { duration: 0.5 } },
-  animate: { scale: 1, rotate: '0deg', transition: { duration: 0.5, delay: 1 } },
+  initial: { scale: 0, rotate: "-50deg", transition: { duration: 0.5 } },
+  animate: { scale: 1, rotate: "0deg", transition: { duration: 0.5, delay: 1 } },
 };
 
 const SocialIcons = () => {

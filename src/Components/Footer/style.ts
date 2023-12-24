@@ -1,14 +1,14 @@
-import styled from '@emotion/styled';
-import { motion } from 'framer-motion';
-import { colors } from '../../styles/colors';
-import { Stack } from '@mui/material';
+import styled from "@emotion/styled";
+import { motion } from "framer-motion";
+import { colors } from "../../styles/colors";
+import { Stack } from "@mui/material";
 
 export const MainWrapper = styled(motion.div)`
   position: absolute;
   bottom: 0;
   width: 100%;
   font-size: 1.8rem;
-  height: 80px;
+  height: 60px;
   color: ${colors.black};
   padding: 20px 0;
 `;

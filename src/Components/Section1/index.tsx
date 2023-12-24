@@ -46,13 +46,9 @@ const Section1 = () => {
       </InnerWrapper>
       <Footer />
       <SocialIcons />
-      <CircularArrowWrapper>
-        <motion.span
-          style={{ background: "red", height: 10, width: 10 }}
-          transition={bounceTransition}
-          animate={{ y: ["100%", "-100%"] }}
-        >
-          {/* <ArrowDown weight="thin" size={30} /> */}
+      <CircularArrowWrapper initial={{ y: 0 }} animate={{ y: 40, transition: { delayChildren: 1, duration: 1 } }}>
+        <motion.span transition={{ duration: 5 }} animate={{ y: [0, 15, 0, 15, 0, 15, 0] }}>
+          <ArrowDown weight="thin" size={30} />
         </motion.span>
       </CircularArrowWrapper>
     </MainWrapper>

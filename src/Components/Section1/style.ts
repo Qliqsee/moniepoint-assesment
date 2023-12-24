@@ -42,7 +42,7 @@ export const TextContent = styled(motion.span)`
   white-space: nowrap;
 `;
 
-export const CircularArrowWrapper = styled(Box)`
+export const CircularArrowWrapper = styled(motion.div)`
   border-radius: 50%;
   height: 80px;
   width: 80px;

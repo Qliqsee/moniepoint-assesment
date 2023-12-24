@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import Header from './Header';
-import Section1 from './Section1';
-import Lenis from '@studio-freight/lenis';
+import React, { useEffect } from "react";
+import Header from "./Header";
+import Section1 from "./Section1";
+import Lenis from "@studio-freight/lenis";
 
 const Main = () => {
   useEffect(() => {
