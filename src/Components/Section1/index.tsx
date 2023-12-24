@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useTransform, animate, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Lenis from "@studio-freight/lenis";
 import { CircularArrowWrapper, ContentWrapper, InnerWrapper, MainWrapper, TextContent } from "./style";

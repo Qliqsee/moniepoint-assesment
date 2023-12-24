@@ -1,7 +1,8 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { GrandChild, IconWrapper, ImageDeckWrapper, TextWrapper } from "./style";
-import { Stack } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import { Gear, HandPointing, Polygon, UserFocus } from "@phosphor-icons/react";
+import { useRef } from "react";
 
 const container = {
   hidden: {
@@ -83,9 +84,12 @@ const itemchild = {
 };
 
 const ImageDeck = () => {
+  // const containerRef = useRef(null);
+  // const isInView = useInView(containerRef, { margin: "-100px" });
+
   return (
     <ImageDeckWrapper>
-      <motion.div variants={container} initial="hidden" animate="animate" exit="exit" className="inner-wrapper">
+      <motion.div variants={container} initial="hidden" animate={"animate"} exit="exit" className="inner-wrapper">
         <ImageBlock
           icon={<UserFocus size={18} />}
           text="Personalized care"
