@@ -4,15 +4,19 @@ import { colors } from '../../styles/colors';
 import { Box, Stack } from '@mui/material';
 
 export const MainWrapper = styled(motion.div)`
+  position: absolute;
+  top: 0;
+  width: 100%;
   font-size: 1.8rem;
   height: 156px;
-  padding: 20px 108px;
   color: ${colors.black};
+  padding: 20px 0;
 `;
 export const InnerWrapper = styled(Stack)`
-  width: 100%;
+  width: 85%;
   align-items: center;
   justify-content: space-between;
+  margin: auto;
 `;
 
 // Left Menu area styles

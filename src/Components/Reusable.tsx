@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight } from 'phosphor-react';
 import React, { useEffect, useState } from 'react';
 import { colors } from '../styles/colors';
+import { ArrowRight } from '@phosphor-icons/react';
 
 export const IconWithText = () => {
   const [isCircle, setIsCircle] = React.useState(false);

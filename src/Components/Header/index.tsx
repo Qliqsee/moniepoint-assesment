@@ -15,11 +15,7 @@ import {
   ToothIconWrapper,
 } from './style';
 import { Tooth } from '@phosphor-icons/react';
-
-const variants = {
-  ini: { borderRadius: '50px', width: '60px', height: '60px', transition: { duration: 1 } },
-  pill: { borderRadius: '50px', width: '130px', height: '60px', transition: { duration: 1 } },
-};
+import { Box } from '@mui/material';
 
 const Header = () => {
   return (
@@ -31,7 +27,6 @@ const Header = () => {
         duration: 1,
         delay: 0.6,
       }}
-      className="header"
     >
       <InnerWrapper direction={'row'}>
         <LeftWrapper initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 2.5 }}>
