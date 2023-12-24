@@ -19,7 +19,6 @@ import {
 import Footer from "../Footer";
 import SocialIcons from "../SocialIcons";
 import { ArrowDown, Atom, Butterfly, Fan, Flower, Hourglass, Plant, Play, Plus, Tooth } from "@phosphor-icons/react";
-import ImageDeck from "./ImageDeck";
 import { colors } from "../../styles/colors";
 
 const container = {
