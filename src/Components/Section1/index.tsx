@@ -26,32 +26,32 @@ const Section1 = () => {
 
   return (
     <MainWrapper ref={containerRef} animate={isInView && "animate"} variants={container}>
-      {isInView && (
-        <>
-          <InnerWrapper>
-            <ContentWrapper>
-              <ImageDeck />
-              <TextContent initial={{ y: 400, rotate: "30deg" }} animate={{ y: 0, rotate: "0deg" }} transition={{ duration: 1 }}>
-                OUR ADVANTAGES
-              </TextContent>
-            </ContentWrapper>
-          </InnerWrapper>
-          <Footer />
-          <SocialIcons />
-          <CircularArrowWrapper
-            onClick={moveToSection2}
-            initial={{ y: 0 }}
-            animate={{ y: 40, transition: { delayChildren: 1, duration: 1 } }}
+      <InnerWrapper>
+        <ContentWrapper>
+          <ImageDeck />
+          <TextContent
+            initial={{ y: 400, rotate: "30deg" }}
+            animate={isInView && { y: 0, rotate: "0deg" }}
+            transition={{ duration: 1 }}
           >
-            <motion.span
-              transition={{ duration: 20 }}
-              animate={{ y: [0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0] }}
-            >
-              <ArrowDown weight="thin" size={30} />
-            </motion.span>
-          </CircularArrowWrapper>
-        </>
-      )}
+            OUR ADVANTAGES
+          </TextContent>
+        </ContentWrapper>
+      </InnerWrapper>
+      <Footer />
+      <SocialIcons />
+      <CircularArrowWrapper
+        onClick={moveToSection2}
+        initial={{ y: 0 }}
+        animate={isInView && { y: 40, transition: { delayChildren: 1, duration: 1 } }}
+      >
+        <motion.span
+          transition={{ duration: 20 }}
+          animate={isInView && { y: [0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0] }}
+        >
+          <ArrowDown weight="thin" size={30} />
+        </motion.span>
+      </CircularArrowWrapper>
     </MainWrapper>
   );
 };

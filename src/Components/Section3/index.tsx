@@ -38,41 +38,59 @@ const Section3 = () => {
             <MainWrapper variants={container}>
               <ContentWrapper>
                 <Stack mb="30px" direction={"row"} alignItems={"center"} spacing={"5px"}>
-                  <CircularWrapper variants={IconVariant} initial="initial" animate="animate" width="35px" height="35px">
+                  <CircularWrapper
+                    variants={IconVariant}
+                    initial="initial"
+                    animate={isInView && "animate"}
+                    width="35px"
+                    height="35px"
+                  >
                     <Hourglass color={colors.loading_secondary} weight="thin" size={20} />{" "}
                   </CircularWrapper>
-                  <ToothWrapper variants={IconVariant} initial="initial" animate="animate" width="35px" height="35px">
+                  <ToothWrapper
+                    variants={IconVariant}
+                    initial="initial"
+                    animate={isInView && "animate"}
+                    width="35px"
+                    height="35px"
+                  >
                     {/* <Tooth color={colors.loading_secondary} weight="thin" size={20} />{" "} */}
-                    <img src="/tooth2.svg" width={20} height={20} alt="" />
+                    <img loading="lazy" src="/tooth2.svg" width={20} height={20} alt="" />
                   </ToothWrapper>
-                  <CircularWrapper variants={IconVariant} initial="initial" animate="animate" width="35px" height="35px">
+                  <CircularWrapper
+                    variants={IconVariant}
+                    initial="initial"
+                    animate={isInView && "animate"}
+                    width="35px"
+                    height="35px"
+                  >
                     <Atom color={colors.loading_secondary} weight="thin" size={20} />{" "}
                   </CircularWrapper>
                 </Stack>
 
                 <Box>
                   <Box overflow={"hidden"} height={70}>
-                    <SlidingText variants={slidingTextVariant} initial="initial" animate="animate">
+                    <SlidingText variants={slidingTextVariant} initial="initial" animate={isInView && "animate"}>
                       Explore our
                     </SlidingText>
                   </Box>
                   <Box overflow={"hidden"} height={70}>
-                    <SlidingText variants={slidingTextVariant} initial="initial" animate="animate">
+                    <SlidingText variants={slidingTextVariant} initial="initial" animate={isInView && "animate"}>
                       service, make
                     </SlidingText>
                   </Box>
                   <Box overflow={"hidden"} height={70}>
-                    <SlidingText variants={slidingTextVariant} initial="initial" animate="animate">
+                    <SlidingText variants={slidingTextVariant} initial="initial" animate={isInView && "animate"}>
                       your smile shine
                     </SlidingText>
                   </Box>
                 </Box>
 
                 <Stack direction={"row"} alignItems={"center"} spacing={"10px"}>
-                  <GetApp variants={ButtonVariant} initial="initial" animate="animate">
+                  <GetApp variants={ButtonVariant} initial="initial" animate={isInView && "animate"}>
                     Get The App
                   </GetApp>
-                  <MeetTeam variants={ButtonVariant} initial="initial" animate="animate">
+                  <MeetTeam variants={ButtonVariant} initial="initial" animate={isInView && "animate"}>
                     Meet The Team
                   </MeetTeam>
                 </Stack>

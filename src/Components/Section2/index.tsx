@@ -51,174 +51,197 @@ const Section2 = () => {
 
   return (
     <MainWrapper ref={containerRef} animate={isInView && "animate"} variants={container}>
-      {isInView && (
-        <>
-          <motion.div initial={{ y: "100%" }} animate={{ y: 0 }} transition={{ duration: 2 }}>
-            <Stack mb="40px" direction={"row"} justifyContent={"flex-end"} spacing={"10px"}>
-              <SlidingText variants={slidingTextVariant} initial="initial" animate="animate">
-                Revolutionalizing
-              </SlidingText>
-              <motion.div
-                variants={SolutionVariant}
+      {/* {isInView && (
+        <> */}
+      <motion.div initial={{ y: "100%" }} animate={isInView && { y: 0 }} transition={{ duration: 2 }}>
+        <Stack mb="40px" direction={"row"} justifyContent={"flex-end"} spacing={"10px"}>
+          <SlidingText variants={slidingTextVariant} initial="initial" animate={isInView && "animate"}>
+            Revolutionalizing
+          </SlidingText>
+          <motion.div
+            variants={SolutionVariant}
+            initial="initial"
+            animate={isInView && "animate"}
+            style={{ paddingTop: 10, overflow: "hidden", textWrap: "nowrap" }}
+          >
+            <Stack direction={"row"} alignItems={"center"} spacing={"5px"}>
+              <CircularWrapper
+                variants={IconVariant1}
                 initial="initial"
-                animate="animate"
-                style={{ paddingTop: 10, overflow: "hidden", textWrap: "nowrap" }}
+                animate={isInView && "animate"}
+                width="18px"
+                height="18px"
               >
-                <Stack direction={"row"} alignItems={"center"} spacing={"5px"}>
-                  <CircularWrapper variants={IconVariant1} initial="initial" animate="animate" width="18px" height="18px">
-                    <Hourglass color={colors.loading_secondary} weight="thin" size={12} />{" "}
-                  </CircularWrapper>
-                  <ToothWrapper variants={IconVariant2} initial="initial" animate="animate" width="18px" height="18px">
-                    {/* <Tooth color={colors.loading_secondary} weight="thin" size={12} />{" "} */}
-                    <img src="/tooth2.svg" width={12} height={12} alt="" />
-                  </ToothWrapper>
-                  <CircularWrapper variants={IconVariant3} initial="initial" animate="animate" width="18px" height="18px">
-                    <Atom color={colors.loading_secondary} weight="thin" size={12} />{" "}
-                  </CircularWrapper>
-                </Stack>
-                <Box mt="10px">
-                  <SmallText variants={SmallTextVariant1} initial="initial" animate="animate">
-                    Modern Solutions,
-                  </SmallText>
-                  <SmallText variants={SmallTextVariant2} initial="initial" animate="animate">
-                    Timeless Smiles
-                  </SmallText>
-                </Box>
-              </motion.div>
-            </Stack>
-
-            <Stack mb="40px" direction={"row"} alignItems={"center"} spacing={"10px"}>
-              <AssistanceWrapper variants={AssistanceWrapperVariant} initial="initial" animate="animate">
-                <Pill variants={AssistancePillVariant} initial="initial" animate="animate">
-                  <motion.span variants={AssistanceTextVariant} initial="initial" animate="animate">
-                    Assistance
-                  </motion.span>
-                </Pill>
-                <ToothWrapper
-                  variants={AssistanceIconVariant}
-                  initial="initial"
-                  animate="animate"
-                  width="40px"
-                  height="40px"
-                  bg={colors.loading_secondary}
-                >
-                  {/* <Tooth color={colors.white} weight="thin" size={27} />{" "} */}
-                  <img src="/tooth.svg" width={27} height={27} alt="" />
-                </ToothWrapper>
-              </AssistanceWrapper>
-              <SlidingText variants={slidingTextVariant} initial="initial" animate="animate">
-                Dental
-              </SlidingText>
-              <AvatarStack variants={DualAvatarWrapperVariant} initial="initial" animate="animate">
-                <CircularWrapper
-                  variants={DualAvatarVariant1}
-                  initial="initial"
-                  animate="animate"
-                  style={{ zIndex: 2 }}
-                  width="85px"
-                  height="85px"
-                  bg={colors.loading_secondary}
-                >
-                  <img src="image5.jpg" alt="" />
-                </CircularWrapper>{" "}
-                <CircularWrapper
-                  variants={DualAvatarVariant2}
-                  initial="initial"
-                  animate="animate"
-                  style={{ marginLeft: -30 }}
-                  width="85px"
-                  height="85px"
-                  bg={colors.skyblue}
-                >
-                  {/* <Fan color={colors.loading_secondary} weight="fill" size={80} />{" "} */}
-                  <img src="/fan.svg" width={80} height={80} alt="" />
-                </CircularWrapper>
-              </AvatarStack>
-              <SlidingText variants={slidingTextVariant} initial="initial" animate="animate">
-                Care
-              </SlidingText>
-            </Stack>
-
-            <Stack direction={"row"} alignItems={"center"} justifyContent={"flex-end"} spacing={"10px"}>
-              <SlidingText variants={slidingTextVariant} initial="initial" animate="animate">
-                With technology
-              </SlidingText>
-              <AvatarStack style={{ gap: 10 }} variants={MultipleAvatarWrapperVariant} initial="initial" animate="animate">
-                <AvatarStack>
-                  <CircularWrapper
-                    variants={MultipleAvatarVariant1}
-                    initial="initial"
-                    animate="animate"
-                    style={{ zIndex: 3 }}
-                    width="50px"
-                    height="50px"
-                    bg={colors.loading_secondary}
-                  >
-                    <img src="image15.jpg" alt="" />
-                  </CircularWrapper>
-                  <CircularWrapper
-                    variants={MultipleAvatarVariant2}
-                    initial="initial"
-                    animate="animate"
-                    style={{ zIndex: 2, marginLeft: -20 }}
-                    width="50px"
-                    height="50px"
-                    bg={colors.loading_secondary}
-                  >
-                    <img src="image14.jpg" alt="" />
-                  </CircularWrapper>
-                  <CircularWrapper
-                    variants={MultipleAvatarVariant3}
-                    initial="initial"
-                    animate="animate"
-                    style={{ zIndex: 1, marginLeft: -20 }}
-                    width="50px"
-                    height="50px"
-                    bg={colors.loading_secondary}
-                  >
-                    <img src="image8.jpg" alt="" />
-                  </CircularWrapper>
-                  <CircularWrapper
-                    variants={MultipleAvatarVariant4}
-                    initial="initial"
-                    animate="animate"
-                    style={{ marginLeft: -20 }}
-                    width="50px"
-                    height="50px"
-                    bg={colors.loading_secondary}
-                  >
-                    <img src="image9.jpg" alt="" />
-                  </CircularWrapper>
-                </AvatarStack>
-                <CircularWrapper variants={PlusIconVariant} initial="initial" animate="animate" width="16px" height="16px">
-                  <Plus color={colors.loading_secondary} size={13} />{" "}
-                </CircularWrapper>
-              </AvatarStack>
-            </Stack>
-
-            <GetStartedWrapper variants={GetStartedVariant} initial="initial" animate="animate">
-              <CircularWrapper bg={colors.loading_secondary} width="90%" height="90%">
-                <Box textAlign={"center"} color={"white"}>
-                  <Box>Get</Box>
-                  <Box>Started</Box>
-                </Box>
+                <Hourglass color={colors.loading_secondary} weight="thin" size={12} />{" "}
               </CircularWrapper>
-            </GetStartedWrapper>
+              <ToothWrapper variants={IconVariant2} initial="initial" animate={isInView && "animate"} width="18px" height="18px">
+                {/* <Tooth color={colors.loading_secondary} weight="thin" size={12} />{" "} */}
+                <img src="/tooth2.svg" width={12} height={12} alt="" />
+              </ToothWrapper>
+              <CircularWrapper
+                variants={IconVariant3}
+                initial="initial"
+                animate={isInView && "animate"}
+                width="18px"
+                height="18px"
+              >
+                <Atom color={colors.loading_secondary} weight="thin" size={12} />{" "}
+              </CircularWrapper>
+            </Stack>
+            <Box mt="10px">
+              <SmallText variants={SmallTextVariant1} initial="initial" animate={isInView && "animate"}>
+                Modern Solutions,
+              </SmallText>
+              <SmallText variants={SmallTextVariant2} initial="initial" animate={isInView && "animate"}>
+                Timeless Smiles
+              </SmallText>
+            </Box>
           </motion.div>
+        </Stack>
 
-          <RoundedEdge variants={PlayCardVariant} initial="initial" animate="animate">
-            <img src="image6.jpg" alt="" />
-            <PlayButtonWrapper variants={PlayIconVariant} initial="initial" animate="animate">
-              <CircularWrapper width="100%" height="100%">
-                <Play color={colors.loading_secondary} weight="fill" size={13} />{" "}
+        <Stack mb="40px" direction={"row"} alignItems={"center"} spacing={"10px"}>
+          <AssistanceWrapper variants={AssistanceWrapperVariant} initial="initial" animate={isInView && "animate"}>
+            <Pill variants={AssistancePillVariant} initial="initial" animate={isInView && "animate"}>
+              <motion.span variants={AssistanceTextVariant} initial="initial" animate={isInView && "animate"}>
+                Assistance
+              </motion.span>
+            </Pill>
+            <ToothWrapper
+              variants={AssistanceIconVariant}
+              initial="initial"
+              animate={isInView && "animate"}
+              width="40px"
+              height="40px"
+              bg={colors.loading_secondary}
+            >
+              {/* <Tooth color={colors.white} weight="thin" size={27} />{" "} */}
+              <img src="/tooth.svg" width={27} height={27} alt="" />
+            </ToothWrapper>
+          </AssistanceWrapper>
+          <SlidingText variants={slidingTextVariant} initial="initial" animate={isInView && "animate"}>
+            Dental
+          </SlidingText>
+          <AvatarStack variants={DualAvatarWrapperVariant} initial="initial" animate={isInView && "animate"}>
+            <CircularWrapper
+              variants={DualAvatarVariant1}
+              initial="initial"
+              animate={isInView && "animate"}
+              style={{ zIndex: 2 }}
+              width="85px"
+              height="85px"
+              bg={colors.loading_secondary}
+            >
+              <img src="image5.jpg" alt="" />
+            </CircularWrapper>{" "}
+            <CircularWrapper
+              variants={DualAvatarVariant2}
+              initial="initial"
+              animate={isInView && "animate"}
+              style={{ marginLeft: -30 }}
+              width="85px"
+              height="85px"
+              bg={colors.skyblue}
+            >
+              {/* <Fan color={colors.loading_secondary} weight="fill" size={80} />{" "} */}
+              <img src="/fan.svg" width={80} height={80} alt="" />
+            </CircularWrapper>
+          </AvatarStack>
+          <SlidingText variants={slidingTextVariant} initial="initial" animate={isInView && "animate"}>
+            Care
+          </SlidingText>
+        </Stack>
+
+        <Stack direction={"row"} alignItems={"center"} justifyContent={"flex-end"} spacing={"10px"}>
+          <SlidingText variants={slidingTextVariant} initial="initial" animate={isInView && "animate"}>
+            With technology
+          </SlidingText>
+          <AvatarStack
+            style={{ gap: 10 }}
+            variants={MultipleAvatarWrapperVariant}
+            initial="initial"
+            animate={isInView && "animate"}
+          >
+            <AvatarStack>
+              <CircularWrapper
+                variants={MultipleAvatarVariant1}
+                initial="initial"
+                animate={isInView && "animate"}
+                style={{ zIndex: 3 }}
+                width="50px"
+                height="50px"
+                bg={colors.loading_secondary}
+              >
+                <img src="image15.jpg" alt="" />
               </CircularWrapper>
-            </PlayButtonWrapper>
-          </RoundedEdge>
+              <CircularWrapper
+                variants={MultipleAvatarVariant2}
+                initial="initial"
+                animate={isInView && "animate"}
+                style={{ zIndex: 2, marginLeft: -20 }}
+                width="50px"
+                height="50px"
+                bg={colors.loading_secondary}
+              >
+                <img src="image14.jpg" alt="" />
+              </CircularWrapper>
+              <CircularWrapper
+                variants={MultipleAvatarVariant3}
+                initial="initial"
+                animate={isInView && "animate"}
+                style={{ zIndex: 1, marginLeft: -20 }}
+                width="50px"
+                height="50px"
+                bg={colors.loading_secondary}
+              >
+                <img src="image8.jpg" alt="" />
+              </CircularWrapper>
+              <CircularWrapper
+                variants={MultipleAvatarVariant4}
+                initial="initial"
+                animate={isInView && "animate"}
+                style={{ marginLeft: -20 }}
+                width="50px"
+                height="50px"
+                bg={colors.loading_secondary}
+              >
+                <img src="image9.jpg" alt="" />
+              </CircularWrapper>
+            </AvatarStack>
+            <CircularWrapper
+              variants={PlusIconVariant}
+              initial="initial"
+              animate={isInView && "animate"}
+              width="16px"
+              height="16px"
+            >
+              <Plus color={colors.loading_secondary} size={13} />{" "}
+            </CircularWrapper>
+          </AvatarStack>
+        </Stack>
 
-          <Footer />
-          <SocialIcons />
-        </>
-      )}
+        <GetStartedWrapper variants={GetStartedVariant} initial="initial" animate={isInView && "animate"}>
+          <CircularWrapper bg={colors.loading_secondary} width="90%" height="90%">
+            <Box textAlign={"center"} color={"white"}>
+              <Box>Get</Box>
+              <Box>Started</Box>
+            </Box>
+          </CircularWrapper>
+        </GetStartedWrapper>
+      </motion.div>
+
+      <RoundedEdge variants={PlayCardVariant} initial="initial" animate={isInView && "animate"}>
+        <img src="image6.jpg" alt="" />
+        <PlayButtonWrapper variants={PlayIconVariant} initial="initial" animate={isInView && "animate"}>
+          <CircularWrapper width="100%" height="100%">
+            <Play color={colors.loading_secondary} weight="fill" size={13} />{" "}
+          </CircularWrapper>
+        </PlayButtonWrapper>
+      </RoundedEdge>
+
+      <Footer />
+      <SocialIcons />
+      {/* </>
+      )} */}
     </MainWrapper>
   );
 };
