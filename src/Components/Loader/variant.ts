@@ -113,7 +113,7 @@ export const RightShiftVariant = {
   animate: {
     x: 20,
     transition: {
-      duration: 2,
+      duration: 1,
       delay: 3,
     },
   },
@@ -126,7 +126,7 @@ export const LeftShiftVariant = {
   animate: {
     x: -20,
     transition: {
-      duration: 2,
+      duration: 1,
       delay: 3,
     },
   },
@@ -136,7 +136,7 @@ export const MainVariant = {
     display: "none",
     transition: {
       duration: 2,
-      delay: 5,
+      delay: 4,
     },
   },
 };
@@ -150,7 +150,7 @@ export const LogoWrapperVariant = {
     opacity: 1,
     transition: {
       duration: 2,
-      delay: 5,
+      delay: 4,
     },
   },
 };
@@ -164,7 +164,7 @@ export const LogoTextVariant = {
     opacity: 1,
     transition: {
       duration: 1,
-      delay: 7,
+      delay: 5,
     },
   },
 };
