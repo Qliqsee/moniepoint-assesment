@@ -97,7 +97,7 @@ const ImageDeck = () => {
         <ImageBlock
           icon={<Polygon size={18} />}
           text="modern solutions"
-          src="/image2.jpg"
+          src="/image8.jpg"
           variants={item2}
           deg={"20deg"}
           id="image-2"

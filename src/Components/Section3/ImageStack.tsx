@@ -5,7 +5,7 @@ import { GalleryVaraint1, GalleryVaraint2, flip } from "./variants";
 
 const images = [
   "/image1.jpg",
-  "/image2.jpg",
+  "/image8.jpg",
   "/image3.jpg",
   "/image4.jpg",
   "/image5.jpg",
@@ -13,11 +13,14 @@ const images = [
   "/image9.jpg",
   "/image10.jpg",
 ];
-
-const ImageStack = () => {
+interface Props {
+  isInView: boolean;
+}
+const ImageStack = ({ isInView }: Props) => {
   return (
     <Gallery>
       <Column
+        isInView={isInView}
         column={1}
         images={[
           { src: images[0], text: "Symptom Checker" },
@@ -27,6 +30,7 @@ const ImageStack = () => {
         ]}
       />
       <Column
+        isInView={isInView}
         column={2}
         images={[
           { src: images[4], text: "Oral Care Guides" },
@@ -44,9 +48,10 @@ export default ImageStack;
 interface ColumnProps {
   images: { src: string; text: string }[];
   column: 1 | 2;
+  isInView: boolean;
 }
 
-const Column = ({ images, column }: ColumnProps) => {
+const Column = ({ images, column, isInView }: ColumnProps) => {
   return (
     <StyledColumn
       variants={column === 1 ? GalleryVaraint1 : GalleryVaraint2}
@@ -56,7 +61,7 @@ const Column = ({ images, column }: ColumnProps) => {
     >
       {images.map(({ src, text }, i) => {
         return (
-          <ImageContainer variants={flip} initial="initial" animate="animate" key={i}>
+          <ImageContainer variants={flip} initial="initial" animate={isInView && "animate"} key={i}>
             <img loading="lazy" src={src} alt="" />
             <ImagePill>{text}</ImagePill>
             <ImageIconWrapper>
