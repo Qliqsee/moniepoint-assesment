@@ -21,7 +21,6 @@ export const MainWrapper = styled(motion.div)`
 
 export const SlidingText = styled(motion.div)`
   font-size: 3vw;
-  font-weight: 300;
   position: relative;
   white-space: nowrap;
   text-transform: uppercase;
