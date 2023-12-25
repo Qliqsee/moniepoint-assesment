@@ -1,5 +1,5 @@
 import { IconWrapper, MainWrapper } from "./style";
-import { FacebookLogo, InstagramLogo, YoutubeLogo } from "@phosphor-icons/react";
+import { FacebookLogo, InstagramLogo, YoutubeLogo } from "phosphor-react";
 
 const variants = {
   initial: { scale: 0, rotate: "-50deg", transition: { duration: 0.5 } },

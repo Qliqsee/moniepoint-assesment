@@ -14,7 +14,6 @@ import {
   SignUp,
   ToothIconWrapper,
 } from "./style";
-import { Tooth } from "@phosphor-icons/react";
 
 const Header = () => {
   return (
@@ -38,7 +37,8 @@ const Header = () => {
         </LeftWrapper>
         <MiddleWrapper initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ duration: 2, delay: 1 }}>
           <ToothIconWrapper alignItems={"center"} spacing={"3px"} justifyContent={"center"}>
-            <Tooth size={16} color="white" />
+            {/* <Tooth size={16} color="white" /> */}
+            <img src="/tooth.svg" width={16} height={16} alt="" />
           </ToothIconWrapper>
           <motion.div initial={{ width: 0 }} animate={{ width: 120, marginLeft: 25 }} transition={{ delay: 2, duration: 2 }}>
             <MiddleAreaText>DENTYTECH</MiddleAreaText>

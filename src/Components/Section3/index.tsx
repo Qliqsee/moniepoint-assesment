@@ -1,10 +1,10 @@
 import { Box, Stack } from "@mui/material";
 import { useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { ContentWrapper, MainWrapper, SlidingText, CircularWrapper, GetApp, MeetTeam, RootWrapper } from "./style";
+import { ContentWrapper, MainWrapper, SlidingText, CircularWrapper, GetApp, MeetTeam, RootWrapper, ToothWrapper } from "./style";
 import Footer from "../Footer";
 import SocialIcons from "../SocialIcons";
-import { Atom, Hourglass, Tooth } from "@phosphor-icons/react";
+import { Atom, Hourglass } from "phosphor-react";
 import { colors } from "../../styles/colors";
 import ImageStack from "./ImageStack";
 import { ButtonVariant, IconVariant, slidingTextVariant } from "./variants";
@@ -41,9 +41,10 @@ const Section3 = () => {
                   <CircularWrapper variants={IconVariant} initial="initial" animate="animate" width="35px" height="35px">
                     <Hourglass color={colors.loading_secondary} weight="thin" size={20} />{" "}
                   </CircularWrapper>
-                  <CircularWrapper variants={IconVariant} initial="initial" animate="animate" width="35px" height="35px">
-                    <Tooth color={colors.loading_secondary} weight="thin" size={20} />{" "}
-                  </CircularWrapper>
+                  <ToothWrapper variants={IconVariant} initial="initial" animate="animate" width="35px" height="35px">
+                    {/* <Tooth color={colors.loading_secondary} weight="thin" size={20} />{" "} */}
+                    <img src="/tooth2.svg" width={20} height={20} alt="" />
+                  </ToothWrapper>
                   <CircularWrapper variants={IconVariant} initial="initial" animate="animate" width="35px" height="35px">
                     <Atom color={colors.loading_secondary} weight="thin" size={20} />{" "}
                   </CircularWrapper>

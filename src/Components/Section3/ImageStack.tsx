@@ -1,5 +1,5 @@
 import { CircularWrapper, Gallery, ImageContainer, ImageIconWrapper, ImagePill, StyledColumn } from "./style";
-import { ArrowUpRight, Heart } from "@phosphor-icons/react";
+import { ArrowUpRight, Heart } from "phosphor-react";
 import { colors } from "../../styles/colors";
 import { GalleryVaraint1, GalleryVaraint2, flip } from "./variants";
 

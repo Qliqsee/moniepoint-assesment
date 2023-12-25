@@ -38,6 +38,15 @@ export const CircularWrapper = styled(motion.div)<{ width: string; height: strin
     border-radius: 50%;
   }
 `;
+export const ToothWrapper = styled(motion.div)<{ width: string; height: string; bg?: string }>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: ${({ height }) => height};
+  width: ${({ width }) => width};
+  background-color: ${({ bg }) => bg || colors.skyblue};
+`;
 
 export const SmallText = styled(motion.div)`
   font-size: 12px;

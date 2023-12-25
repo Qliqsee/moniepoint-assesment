@@ -1,7 +1,7 @@
-import { CircularWrapper, Container, FlexRow, LogoText, LogoWrapper, MainWrapper, Pill, Pill2 } from "./style";
-import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
+import { CircularWrapper, Container, FlexRow, LogoText, LogoWrapper, MainWrapper, Pill, Pill2, ToothWrapper } from "./style";
+
 import { colors } from "../../styles/colors";
-import { ArrowLeft, Tooth } from "@phosphor-icons/react";
+import { ArrowLeft, ArrowRight } from "phosphor-react";
 import {
   AssistancePillVariant,
   DentalPillVariant,
@@ -87,15 +87,17 @@ const Loader = () => {
               </Pill2>
             </motion.div>
           </motion.div>
-          <CircularWrapper variants={LogoVariant} initial="initial" animate="animate" size="60px" bg={colors.loading_secondary}>
-            <Tooth size={40} color={colors.loading_primary} />
-          </CircularWrapper>
+          <ToothWrapper variants={LogoVariant} initial="initial" animate="animate" size="60px" bg={colors.loading_secondary}>
+            {/* <Tooth size={40} color={colors.loading_primary} /> */}
+            <img src="/tooth.svg" width={40} height={40} alt="" />
+          </ToothWrapper>
         </FlexRow>
       </Container>
       <LogoWrapper variants={LogoWrapperVariant} initial="initial" animate="animate">
-        <CircularWrapper size="60px" bg={colors.loading_secondary}>
-          <Tooth size={40} color={colors.loading_primary} />
-        </CircularWrapper>
+        <ToothWrapper size="60px" bg={colors.loading_secondary}>
+          {/* <Tooth size={40} color={colors.loading_primary} /> */}
+          <img src="/tooth.svg" width={40} height={40} alt="" />
+        </ToothWrapper>
         <Box mt="10px" height={30} overflow={"hidden"}>
           <LogoText variants={LogoTextVariant} initial="initial" animate="animate">
             dentytech

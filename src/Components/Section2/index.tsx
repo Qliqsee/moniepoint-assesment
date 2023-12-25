@@ -11,10 +11,11 @@ import {
   GetStartedWrapper,
   AssistanceWrapper,
   AvatarStack,
+  ToothWrapper,
 } from "./style";
 import Footer from "../Footer";
 import SocialIcons from "../SocialIcons";
-import { Atom, Fan, Hourglass, Play, Plus, Tooth } from "@phosphor-icons/react";
+import { Atom, Hourglass, Play, Plus } from "phosphor-react";
 import { colors } from "../../styles/colors";
 import { useRef } from "react";
 import {
@@ -67,9 +68,10 @@ const Section2 = () => {
                   <CircularWrapper variants={IconVariant1} initial="initial" animate="animate" width="18px" height="18px">
                     <Hourglass color={colors.loading_secondary} weight="thin" size={12} />{" "}
                   </CircularWrapper>
-                  <CircularWrapper variants={IconVariant2} initial="initial" animate="animate" width="18px" height="18px">
-                    <Tooth color={colors.loading_secondary} weight="thin" size={12} />{" "}
-                  </CircularWrapper>
+                  <ToothWrapper variants={IconVariant2} initial="initial" animate="animate" width="18px" height="18px">
+                    {/* <Tooth color={colors.loading_secondary} weight="thin" size={12} />{" "} */}
+                    <img src="/tooth2.svg" width={12} height={12} alt="" />
+                  </ToothWrapper>
                   <CircularWrapper variants={IconVariant3} initial="initial" animate="animate" width="18px" height="18px">
                     <Atom color={colors.loading_secondary} weight="thin" size={12} />{" "}
                   </CircularWrapper>
@@ -92,7 +94,7 @@ const Section2 = () => {
                     Assistance
                   </motion.span>
                 </Pill>
-                <CircularWrapper
+                <ToothWrapper
                   variants={AssistanceIconVariant}
                   initial="initial"
                   animate="animate"
@@ -100,8 +102,9 @@ const Section2 = () => {
                   height="40px"
                   bg={colors.loading_secondary}
                 >
-                  <Tooth color={colors.white} weight="thin" size={27} />{" "}
-                </CircularWrapper>
+                  {/* <Tooth color={colors.white} weight="thin" size={27} />{" "} */}
+                  <img src="/tooth.svg" width={27} height={27} alt="" />
+                </ToothWrapper>
               </AssistanceWrapper>
               <SlidingText variants={slidingTextVariant} initial="initial" animate="animate">
                 Dental
@@ -127,7 +130,8 @@ const Section2 = () => {
                   height="85px"
                   bg={colors.skyblue}
                 >
-                  <Fan color={colors.loading_secondary} weight="fill" size={80} />{" "}
+                  {/* <Fan color={colors.loading_secondary} weight="fill" size={80} />{" "} */}
+                  <img src="/fan.svg" width={80} height={80} alt="" />
                 </CircularWrapper>
               </AvatarStack>
               <SlidingText variants={slidingTextVariant} initial="initial" animate="animate">

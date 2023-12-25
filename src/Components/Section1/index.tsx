@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { CircularArrowWrapper, ContentWrapper, InnerWrapper, MainWrapper, TextContent } from "./style";
 import Footer from "../Footer";
 import SocialIcons from "../SocialIcons";
-import { ArrowDown } from "@phosphor-icons/react";
+import { ArrowDown } from "phosphor-react";
 import ImageDeck from "./ImageDeck";
 
 const container = {

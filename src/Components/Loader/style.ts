@@ -34,6 +34,15 @@ export const CircularWrapper = styled(motion.div)<{ size: string; bg?: string }>
     border-radius: 50%;
   }
 `;
+export const ToothWrapper = styled(motion.div)<{ size: string; bg?: string }>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: ${({ size }) => size};
+  width: ${({ size }) => size};
+  background-color: ${({ bg }) => bg || colors.loading_secondary};
+`;
 export const Pill = styled(motion.div)<{ bg?: string }>`
   display: flex;
   align-items: center;

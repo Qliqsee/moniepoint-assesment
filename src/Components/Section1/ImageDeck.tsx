@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { GrandChild, IconWrapper, ImageDeckWrapper, TextWrapper } from "./style";
 import { Stack } from "@mui/material";
-import { Gear, HandPointing, Polygon, UserFocus } from "@phosphor-icons/react";
+import { Gear, HandPointing, Polygon, UserFocus } from "phosphor-react";
 
 const container = {
   hidden: {
