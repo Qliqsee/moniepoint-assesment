@@ -148,7 +148,7 @@ export const ImageBlock = ({ variants, id, deg, src, icon, text }: ImageBlockPro
             <IconWrapper>{icon}</IconWrapper>
             <TextWrapper>{text}</TextWrapper>
           </Stack>
-          <img src={src} alt={id} />
+          <img loading="lazy" src={src} alt={id} />
         </GrandChild>
       </motion.div>
     </motion.div>

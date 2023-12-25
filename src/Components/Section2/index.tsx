@@ -131,7 +131,7 @@ const Section2 = () => {
               height="85px"
               bg={colors.loading_secondary}
             >
-              <img src="image5.jpg" alt="" />
+              <img loading="lazy" src="image5.jpg" alt="" />
             </CircularWrapper>{" "}
             <CircularWrapper
               variants={DualAvatarVariant2}
@@ -171,7 +171,7 @@ const Section2 = () => {
                 height="50px"
                 bg={colors.loading_secondary}
               >
-                <img src="image15.jpg" alt="" />
+                <img loading="lazy" src="image15.jpg" alt="" />
               </CircularWrapper>
               <CircularWrapper
                 variants={MultipleAvatarVariant2}
@@ -182,7 +182,7 @@ const Section2 = () => {
                 height="50px"
                 bg={colors.loading_secondary}
               >
-                <img src="image14.jpg" alt="" />
+                <img loading="lazy" src="image14.jpg" alt="" />
               </CircularWrapper>
               <CircularWrapper
                 variants={MultipleAvatarVariant3}
@@ -193,7 +193,7 @@ const Section2 = () => {
                 height="50px"
                 bg={colors.loading_secondary}
               >
-                <img src="image8.jpg" alt="" />
+                <img loading="lazy" src="image8.jpg" alt="" />
               </CircularWrapper>
               <CircularWrapper
                 variants={MultipleAvatarVariant4}
@@ -204,7 +204,7 @@ const Section2 = () => {
                 height="50px"
                 bg={colors.loading_secondary}
               >
-                <img src="image9.jpg" alt="" />
+                <img loading="lazy" src="image9.jpg" alt="" />
               </CircularWrapper>
             </AvatarStack>
             <CircularWrapper
@@ -230,7 +230,7 @@ const Section2 = () => {
       </motion.div>
 
       <RoundedEdge variants={PlayCardVariant} initial="initial" animate={isInView && "animate"}>
-        <img src="image6.jpg" alt="" />
+        <img loading="lazy" src="image6.jpg" alt="" />
         <PlayButtonWrapper variants={PlayIconVariant} initial="initial" animate={isInView && "animate"}>
           <CircularWrapper width="100%" height="100%">
             <Play color={colors.loading_secondary} weight="fill" size={13} />{" "}

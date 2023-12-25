@@ -57,7 +57,7 @@ const Column = ({ images, column }: ColumnProps) => {
       {images.map(({ src, text }, i) => {
         return (
           <ImageContainer variants={flip} initial="initial" animate="animate" key={i}>
-            <img src={src} alt="" />
+            <img loading="lazy" src={src} alt="" />
             <ImagePill>{text}</ImagePill>
             <ImageIconWrapper>
               <CircularWrapper bg="white" height="25px" width="25px">
