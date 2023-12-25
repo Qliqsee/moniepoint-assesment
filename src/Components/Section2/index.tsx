@@ -116,7 +116,7 @@ const Section2 = () => {
                   height="85px"
                   bg={colors.loading_secondary}
                 >
-                  <img src="image1.jpg" alt="" />
+                  <img src="image5.jpg" alt="" />
                 </CircularWrapper>{" "}
                 <CircularWrapper
                   variants={DualAvatarVariant2}
@@ -150,7 +150,7 @@ const Section2 = () => {
                     height="50px"
                     bg={colors.loading_secondary}
                   >
-                    <img src="image1.jpg" alt="" />
+                    <img src="image15.jpg" alt="" />
                   </CircularWrapper>
                   <CircularWrapper
                     variants={MultipleAvatarVariant2}
@@ -161,7 +161,7 @@ const Section2 = () => {
                     height="50px"
                     bg={colors.loading_secondary}
                   >
-                    <img src="image1.jpg" alt="" />
+                    <img src="image14.jpg" alt="" />
                   </CircularWrapper>
                   <CircularWrapper
                     variants={MultipleAvatarVariant3}
@@ -172,7 +172,7 @@ const Section2 = () => {
                     height="50px"
                     bg={colors.loading_secondary}
                   >
-                    <img src="image1.jpg" alt="" />
+                    <img src="image8.jpg" alt="" />
                   </CircularWrapper>
                   <CircularWrapper
                     variants={MultipleAvatarVariant4}
@@ -183,7 +183,7 @@ const Section2 = () => {
                     height="50px"
                     bg={colors.loading_secondary}
                   >
-                    <img src="image1.jpg" alt="" />
+                    <img src="image9.jpg" alt="" />
                   </CircularWrapper>
                 </AvatarStack>
                 <CircularWrapper variants={PlusIconVariant} initial="initial" animate="animate" width="16px" height="16px">
@@ -203,7 +203,7 @@ const Section2 = () => {
           </motion.div>
 
           <RoundedEdge variants={PlayCardVariant} initial="initial" animate="animate">
-            <img src="image1.jpg" alt="" />
+            <img src="image6.jpg" alt="" />
             <PlayButtonWrapper variants={PlayIconVariant} initial="initial" animate="animate">
               <CircularWrapper width="100%" height="100%">
                 <Play color={colors.loading_secondary} weight="fill" size={13} />{" "}

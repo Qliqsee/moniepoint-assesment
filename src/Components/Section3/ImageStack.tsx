@@ -5,13 +5,13 @@ import { GalleryVaraint1, GalleryVaraint2, flip } from "./variants";
 
 const images = [
   "/image1.jpg",
-  "/image1.jpg",
-  "/image1.jpg",
-  "/image1.jpg",
-  "/image1.jpg",
-  "/image1.jpg",
-  "/image1.jpg",
-  "/image1.jpg",
+  "/image2.jpg",
+  "/image3.jpg",
+  "/image4.jpg",
+  "/image5.jpg",
+  "/image8.jpg",
+  "/image9.jpg",
+  "/image10.jpg",
 ];
 
 const ImageStack = () => {
@@ -20,7 +20,7 @@ const ImageStack = () => {
       <Column
         column={1}
         images={[
-          { src: images[0], text: "Oral Health Assesment" },
+          { src: images[0], text: "Symptom Checker" },
           { src: images[1], text: "Dental Health Records" },
           { src: images[2], text: "Oral Health Assesment" },
           { src: images[3], text: "Oral Health Assesment" },
