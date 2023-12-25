@@ -3,10 +3,20 @@ import { motion } from "framer-motion";
 import { colors } from "../../styles/colors";
 import { Stack } from "@mui/material";
 
-export const MainWrapper = styled(Stack)`
-  width: 100%;
+export const MainWrapper = styled(motion.div)`
+  width: 100vw;
   height: 100vh;
   background: ${colors.loading_primary};
+  position: relative;
+`;
+export const Container = styled(motion.div)`
+  width: 100%;
+  height: 100%;
+  background: ${colors.loading_primary};
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 export const CircularWrapper = styled(motion.div)<{ size: string; bg?: string }>`
@@ -77,5 +87,15 @@ export const FlexCol = styled(motion.div)`
 export const LogoText = styled(motion.div)`
   font-size: 25px;
   color: ${colors.loading_secondary};
-  font-weight: 300;
+  text-transform: uppercase;
+`;
+export const LogoWrapper = styled(motion.div)`
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
