@@ -26,7 +26,7 @@ const Section3 = () => {
   useEffect(() => {
     setTimeout(() => {
       setShowFooter(true);
-    }, 4500);
+    }, 10000);
   }, []);
 
   return (
@@ -95,7 +95,7 @@ const Section3 = () => {
           )}
         </MainWrapper>
         <Box zIndex={-1} padding-left={"20px"} width={"50%"} height={"100%"}>
-          {isInView && <ImageStack isInView={isInView} />}
+          <ImageStack isInView={isInView} />
         </Box>
       </RootWrapper>
     </Box>

@@ -56,7 +56,7 @@ const Column = ({ images, column, isInView }: ColumnProps) => {
     <StyledColumn
       variants={column === 1 ? GalleryVaraint1 : GalleryVaraint2}
       initial="initial"
-      animate="animate"
+      animate={isInView && "animate"}
       // style={{ y }}
     >
       {images.map(({ src, text }, i) => {
