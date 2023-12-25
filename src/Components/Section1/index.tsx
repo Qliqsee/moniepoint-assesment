@@ -30,8 +30,6 @@ const Section1 = () => {
   }, [isInView]);
 
   const moveToSection2 = () => {
-    console.log("clicling Qlqisee");
-
     const section2 = document.getElementById("section-2");
     section2?.scrollIntoView({ behavior: "smooth" });
   };

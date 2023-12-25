@@ -194,9 +194,7 @@ export const MultipleAvatarWrapperVariant = {
 };
 
 export const MultipleAvatarVariant1 = {
-  initial: {
-    // scale: 0,
-  },
+  initial: {},
   animate: {
     scale: 1,
     transition: {
@@ -209,7 +207,6 @@ export const MultipleAvatarVariant1 = {
 export const MultipleAvatarVariant2 = {
   initial: {
     marginLeft: -50,
-    // scale: 0,
   },
   animate: {
     marginLeft: -20,
@@ -224,7 +221,6 @@ export const MultipleAvatarVariant2 = {
 export const MultipleAvatarVariant3 = {
   initial: {
     marginLeft: -50,
-    // scale: 0,
   },
   animate: {
     marginLeft: -20,
@@ -239,7 +235,6 @@ export const MultipleAvatarVariant3 = {
 export const MultipleAvatarVariant4 = {
   initial: {
     marginLeft: -50,
-    // scale: 0,
   },
   animate: {
     marginLeft: -20,
