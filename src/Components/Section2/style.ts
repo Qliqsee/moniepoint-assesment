@@ -58,7 +58,7 @@ export const RoundedEdge = styled(motion.div)`
   height: 120px;
   width: 200px;
   position: absolute;
-  bottom: 130px;
+  bottom: 150px;
   left: 150px;
 
   img {
@@ -96,7 +96,7 @@ export const AssistanceWrapper = styled(motion.div)`
   overflow: hidden;
 `;
 
-export const DualAvatar = styled(motion.div)`
+export const AvatarStack = styled(motion.div)`
   display: flex;
   align-items: center;
   overflow: hidden;

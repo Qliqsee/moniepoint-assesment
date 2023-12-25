@@ -187,3 +187,99 @@ export const DualAvatarVariant2 = {
     },
   },
 };
+
+export const MultipleAvatarWrapperVariant = {
+  initial: { width: 0, scale: 0 },
+  animate: { width: 250, scale: 1, transition: { duration: 1.5, delay: 1.6 } },
+};
+
+export const MultipleAvatarVariant1 = {
+  initial: {
+    // scale: 0,
+  },
+  animate: {
+    scale: 1,
+    transition: {
+      duration: 2,
+      delay: 3,
+    },
+  },
+};
+
+export const MultipleAvatarVariant2 = {
+  initial: {
+    marginLeft: -50,
+    // scale: 0,
+  },
+  animate: {
+    marginLeft: -20,
+    scale: 1,
+    transition: {
+      duration: 1,
+      delay: 3,
+    },
+  },
+};
+
+export const MultipleAvatarVariant3 = {
+  initial: {
+    marginLeft: -50,
+    // scale: 0,
+  },
+  animate: {
+    marginLeft: -20,
+    scale: 1,
+    transition: {
+      duration: 1,
+      delay: 3,
+    },
+  },
+};
+
+export const MultipleAvatarVariant4 = {
+  initial: {
+    marginLeft: -50,
+    // scale: 0,
+  },
+  animate: {
+    marginLeft: -20,
+    scale: 1,
+    transition: {
+      duration: 1,
+      delay: 3,
+    },
+  },
+};
+
+export const PlusIconVariant = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 1,
+      delay: 3,
+    },
+  },
+};
+
+export const PlayIconVariant = {
+  initial: { scale: 0, rotate: "-50deg" },
+  animate: { scale: 1, rotate: "0deg", transition: { duration: 3, delay: 1.6 } },
+};
+
+export const PlayCardVariant = {
+  initial: {
+    opacity: 0,
+    scale: 0,
+  },
+  animate: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 1,
+      delay: 1.8,
+    },
+  },
+};
