@@ -46,7 +46,7 @@ import {
 
 const Section2 = () => {
   const containerRef = useRef(null);
-  const isInView = useInView(containerRef, { margin: "-1px" });
+  const isInView = useInView(containerRef, { margin: "-100px" });
 
   const [render, setRender] = useState(false);
 

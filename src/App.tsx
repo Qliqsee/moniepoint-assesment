@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react';
-import './App.css';
-import Loader from './Components/Loader';
-import Main from './Components/Main';
+import { useEffect, useState } from "react";
+import "./App.css";
+import Loader from "./Components/Loader";
+import Main from "./Components/Main";
+import SmoothScroll from "./Components/SmoothScroll";
 
 function App() {
   const [loading, setLoading] = useState(true);

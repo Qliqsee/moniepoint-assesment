@@ -1,7 +1,6 @@
 import { Box } from "@mui/material";
 import { motion, AnimatePresence, useScroll, useTransform, animate, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import Lenis from "@studio-freight/lenis";
 import { CircularArrowWrapper, ContentWrapper, InnerWrapper, MainWrapper, TextContent } from "./style";
 import Footer from "../Footer";
 import SocialIcons from "../SocialIcons";

@@ -2,26 +2,38 @@ import { motion } from "framer-motion";
 import { CircularWrapper, Gallery, ImageContainer, ImageIconWrapper, ImagePill, StyledColumn } from "./style";
 import { ArrowUpRight, Heart } from "@phosphor-icons/react";
 import { colors } from "../../styles/colors";
+import { ButtonVariant, GalleryVaraint1, GalleryVaraint2, flip } from "./variants";
 
-const images = ["/image1.jpg", "/image1.jpg", "/image1.jpg", "/image1.jpg", "/image1.jpg", "/image1.jpg"];
+const images = [
+  "/image1.jpg",
+  "/image1.jpg",
+  "/image1.jpg",
+  "/image1.jpg",
+  "/image1.jpg",
+  "/image1.jpg",
+  "/image1.jpg",
+  "/image1.jpg",
+];
 
 const ImageStack = () => {
   return (
     <Gallery>
       <Column
-        y={1}
+        column={1}
         images={[
           { src: images[0], text: "Oral Health Assesment" },
           { src: images[1], text: "Dental Health Records" },
           { src: images[2], text: "Oral Health Assesment" },
+          { src: images[3], text: "Oral Health Assesment" },
         ]}
       />
       <Column
-        y={1}
+        column={2}
         images={[
-          { src: images[3], text: "Oral Care Guides" },
-          { src: images[4], text: "Appointment Scheduling" },
-          { src: images[5], text: "Medication Tracking" },
+          { src: images[4], text: "Oral Care Guides" },
+          { src: images[5], text: "Appointment Scheduling" },
+          { src: images[6], text: "Medication Tracking" },
+          { src: images[7], text: "Medication Tracking" },
         ]}
       />
     </Gallery>
@@ -32,15 +44,20 @@ export default ImageStack;
 
 interface ColumnProps {
   images: { src: string; text: string }[];
-  y: number;
+  column: 1 | 2;
 }
 
-const Column = ({ images, y }: ColumnProps) => {
+const Column = ({ images, column }: ColumnProps) => {
   return (
-    <StyledColumn style={{ y }}>
+    <StyledColumn
+      variants={column === 1 ? GalleryVaraint1 : GalleryVaraint2}
+      initial="initial"
+      animate="animate"
+      // style={{ y }}
+    >
       {images.map(({ src, text }, i) => {
         return (
-          <ImageContainer key={i}>
+          <ImageContainer variants={flip} initial="initial" animate="animate" key={i}>
             <img src={src} alt="" />
             <ImagePill>{text}</ImagePill>
             <ImageIconWrapper>

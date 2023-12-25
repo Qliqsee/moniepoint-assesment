@@ -3,6 +3,12 @@ import { Box } from "@mui/material";
 import { motion } from "framer-motion";
 import { colors } from "../../styles/colors";
 
+export const RootWrapper = styled(motion.div)`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+`;
 export const MainWrapper = styled(motion.div)`
   z-index: 100;
   position: relative;
@@ -20,17 +26,6 @@ export const InnerWrapper = styled(Box)`
   align-items: center;
   justify-content: center;
   width: 100%;
-`;
-
-export const ContentWrapper = styled(Box)`
-  width: 50%;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  width: 50%;
-  display: flex;
-  align-content: center;
-  justify-content: center;
 `;
 
 export const TextContent = styled(motion.span)`
@@ -125,6 +120,7 @@ export const SlidingText = styled(motion.div)`
   position: relative;
   white-space: nowrap;
   text-transform: uppercase;
+  overflow: hidden;
 `;
 
 export const CircularWrapper = styled(motion.div)<{ width: string; height: string; bg?: string }>`
@@ -197,7 +193,7 @@ export const GetStartedWrapper = styled(motion.div)`
   right: 50%;
 `;
 
-export const GetApp = styled(Box)`
+export const GetApp = styled(motion.div)`
   border: 1px solid ${colors.black};
   border-radius: 40px;
   font-weight: 500;
@@ -206,7 +202,7 @@ export const GetApp = styled(Box)`
   background-color: transparent;
   width: fit-content;
 `;
-export const MeetTeam = styled(Box)`
+export const MeetTeam = styled(motion.div)`
   border-radius: 40px;
   font-weight: 500;
   padding: 6px 10px;
@@ -224,6 +220,7 @@ export const Gallery = styled(motion.div)`
   margin: auto;
   position: relative;
   display: flex;
+  height: 100%;
 `;
 export const StyledColumn = styled(motion.div)`
   position: relative;
@@ -231,14 +228,14 @@ export const StyledColumn = styled(motion.div)`
   width: 50%;
   gap: 20px;
   &:nth-of-type(1) {
-    top: 3%;
+    top: 5vh;
   }
   &:nth-of-type(2) {
-    top: -10%;
+    top: -45vh;
   }
 `;
 export const ImageContainer = styled(motion.div)`
-  height: 20vw;
+  height: 35vh;
   width: 18vw;
   position: relative;
   border-radius: 20px;
@@ -269,4 +266,9 @@ export const ImageIconWrapper = styled(motion.div)`
   position: absolute;
   top: 10px;
   right: 10px;
+`;
+export const ContentWrapper = styled(motion.div)`
+  display: flex;
+  padding-left: 50px;
+  flex-direction: column;
 `;

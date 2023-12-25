@@ -19,3 +19,12 @@ section {
   scroll-snap-align: center;
   overflow: hidden;
 }
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}

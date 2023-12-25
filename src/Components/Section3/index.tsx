@@ -1,7 +1,6 @@
 import { Box, Stack } from "@mui/material";
 import { motion, AnimatePresence, useScroll, useTransform, animate, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
-import Lenis from "@studio-freight/lenis";
+import { useEffect, useRef, useState } from "react";
 import {
   Pill,
   CircularArrowWrapper,
@@ -17,6 +16,7 @@ import {
   GetStartedWrapper,
   GetApp,
   MeetTeam,
+  RootWrapper,
 } from "./style";
 import Footer from "../Footer";
 import SocialIcons from "../SocialIcons";
@@ -24,6 +24,8 @@ import { ArrowDown, Atom, Butterfly, Fan, Flower, Hourglass, Plant, Play, Plus, 
 import { colors } from "../../styles/colors";
 import { Login, SignUp } from "../Header/style";
 import ImageStack from "./ImageStack";
+import { IconVariant1, IconVariant3 } from "../Section2/variants";
+import { ButtonVariant, IconVariant, slidingTextVariant } from "./variants";
 
 const container = {
   animate: {
@@ -35,58 +37,81 @@ const container = {
 };
 
 const Section3 = () => {
-  //   const container = useRef(null);
-  //   const { scrollYProgress } = useScroll({ target: container, offset: ['start end', 'end start'] });
-  //   const y = useTransform(scrollYProgress, [0, 1], [1, 1000]);
-
-  //   useEffect(() => {
-  //     setTimeout(() => {
-  //       setPlayMarquee(true);
-  //     }, 2000);
-  //   }, []);
-
   const containerRef = useRef(null);
-  const isInView = useInView(containerRef, { margin: "-100px" });
+  const { scrollYProgress } = useScroll({ target: containerRef, offset: ["start end", "end start"] });
+  const column1 = useTransform(scrollYProgress, [0, 1], [1, -500]);
+  const column2 = useTransform(scrollYProgress, [0, 1], [1, -500]);
+
+  const [showFooter, setShowFooter] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowFooter(true);
+    }, 3500);
+  }, []);
+
+  // const containerRef = useRef(null);
+  // const isInView = useInView(containerRef, { margin: "-100px" });
 
   return (
-    <Stack width={"100%"} height={"100%"} direction={"row"}>
+    <RootWrapper initial={{ y: "200%" }} animate={{ y: 0 }} transition={{ duration: 2, delay: 2 }}>
       <MainWrapper
         ref={containerRef}
         // animate={isInView && "animate"}
         variants={container}
       >
-        <Stack pl="50px" spacing={"30px"}>
-          <Stack direction={"row"} alignItems={"center"} spacing={"5px"}>
-            <CircularWrapper width="35px" height="35px">
+        <ContentWrapper>
+          <Stack mb="30px" direction={"row"} alignItems={"center"} spacing={"5px"}>
+            <CircularWrapper variants={IconVariant} initial="initial" animate="animate" width="35px" height="35px">
               <Hourglass color={colors.loading_secondary} weight="thin" size={20} />{" "}
             </CircularWrapper>
-            <CircularWrapper width="35px" height="35px">
+            <CircularWrapper variants={IconVariant} initial="initial" animate="animate" width="35px" height="35px">
               <Tooth color={colors.loading_secondary} weight="thin" size={20} />{" "}
             </CircularWrapper>
-            <CircularWrapper width="35px" height="35px">
+            <CircularWrapper variants={IconVariant} initial="initial" animate="animate" width="35px" height="35px">
               <Atom color={colors.loading_secondary} weight="thin" size={20} />{" "}
             </CircularWrapper>
           </Stack>
 
           <Box>
-            <SlidingText>Explore our</SlidingText>
-            <SlidingText>service, make</SlidingText>
-            <SlidingText>your smile shine</SlidingText>
+            <Box overflow={"hidden"} height={70}>
+              <SlidingText variants={slidingTextVariant} initial="initial" animate="animate">
+                Explore our
+              </SlidingText>
+            </Box>
+            <Box overflow={"hidden"} height={70}>
+              <SlidingText variants={slidingTextVariant} initial="initial" animate="animate">
+                service, make
+              </SlidingText>
+            </Box>
+            <Box overflow={"hidden"} height={70}>
+              <SlidingText variants={slidingTextVariant} initial="initial" animate="animate">
+                your smile shine
+              </SlidingText>
+            </Box>
           </Box>
 
           <Stack direction={"row"} alignItems={"center"} spacing={"10px"}>
-            <GetApp>Get The App</GetApp>
-            <MeetTeam>Meet The Team</MeetTeam>
+            <GetApp variants={ButtonVariant} initial="initial" animate="animate">
+              Get The App
+            </GetApp>
+            <MeetTeam variants={ButtonVariant} initial="initial" animate="animate">
+              Meet The Team
+            </MeetTeam>
           </Stack>
-        </Stack>
+        </ContentWrapper>
 
-        <Footer />
-        <SocialIcons />
+        {showFooter && (
+          <>
+            <Footer />
+            <SocialIcons />
+          </>
+        )}
       </MainWrapper>
       <Box zIndex={-1} padding-left={"20px"} width={"50%"} height={"100%"}>
         <ImageStack />
       </Box>
-    </Stack>
+    </RootWrapper>
   );
 };
 
