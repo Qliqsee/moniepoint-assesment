@@ -15,7 +15,7 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  return <>{false ? <Loader /> : <Main />}</>;
+  return <>{true ? <Loader /> : <Main />}</>;
 }
 
 export default App;
