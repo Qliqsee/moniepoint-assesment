@@ -1,8 +1,7 @@
-import { motion } from "framer-motion";
 import { CircularWrapper, Gallery, ImageContainer, ImageIconWrapper, ImagePill, StyledColumn } from "./style";
 import { ArrowUpRight, Heart } from "@phosphor-icons/react";
 import { colors } from "../../styles/colors";
-import { ButtonVariant, GalleryVaraint1, GalleryVaraint2, flip } from "./variants";
+import { GalleryVaraint1, GalleryVaraint2, flip } from "./variants";
 
 const images = [
   "/image1.jpg",

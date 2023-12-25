@@ -1,6 +1,5 @@
-import { Box } from "@mui/material";
-import { motion, AnimatePresence, useScroll, useTransform, animate, useInView } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import { CircularArrowWrapper, ContentWrapper, InnerWrapper, MainWrapper, TextContent } from "./style";
 import Footer from "../Footer";
 import SocialIcons from "../SocialIcons";
@@ -19,14 +18,6 @@ const container = {
 const Section1 = () => {
   const containerRef = useRef(null);
   const isInView = useInView(containerRef, { margin: "-100px" });
-
-  // const [render, setRender] = useState(false);
-
-  // useEffect(() => {
-  //   if (isInView && !render) {
-  //     setRender(true);
-  //   }
-  // }, [isInView]);
 
   const moveToSection2 = () => {
     const section2 = document.getElementById("section-2");
