@@ -28,7 +28,7 @@ export const ButtonVariant = {
 
     transition: {
       duration: 3,
-      delay: 2.5,
+      delay: 1.5,
     },
   },
 };
@@ -43,7 +43,7 @@ export const flip = {
     opacity: 1,
     transition: {
       duration: 3,
-      delay: 3,
+      delay: 2,
     },
   },
 };
@@ -52,7 +52,7 @@ export const GalleryVaraint1 = {
   animate: {
     y: [0, -450, 0],
     transition: {
-      duration: 4,
+      duration: 6,
       delay: 5,
     },
   },
@@ -61,7 +61,7 @@ export const GalleryVaraint2 = {
   animate: {
     y: [0, 400, 0],
     transition: {
-      duration: 4,
+      duration: 6,
       delay: 5,
     },
   },

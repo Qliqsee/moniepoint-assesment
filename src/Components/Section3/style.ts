@@ -221,12 +221,14 @@ export const Gallery = styled(motion.div)`
   position: relative;
   display: flex;
   height: 100%;
+  z-index: -10;
 `;
 export const StyledColumn = styled(motion.div)`
   position: relative;
   height: 100%;
   width: 50%;
   gap: 20px;
+  z-index: -10;
   &:nth-of-type(1) {
     top: 5vh;
   }
@@ -240,6 +242,7 @@ export const ImageContainer = styled(motion.div)`
   position: relative;
   border-radius: 20px;
   margin-bottom: 15px;
+  z-index: -10;
   img {
     object-fit: cover;
     height: 100%;

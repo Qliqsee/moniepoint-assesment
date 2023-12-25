@@ -6,6 +6,10 @@ interface Props {
 }
 
 function SmoothScroll({ children }: Props) {
-  return <ReactLenis root>{children}</ReactLenis>;
+  return (
+    <ReactLenis options={{ lerp: 0.1, duration: 1.5, smoothTouch: true }} root>
+      {children}
+    </ReactLenis>
+  );
 }
 export default SmoothScroll;

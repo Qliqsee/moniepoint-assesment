@@ -48,19 +48,17 @@ const Section2 = () => {
   const containerRef = useRef(null);
   const isInView = useInView(containerRef, { margin: "-100px" });
 
-  const [render, setRender] = useState(false);
+  // const [render, setRender] = useState(false);
 
-  useEffect(() => {
-    if (isInView && !render) {
-      setRender(true);
-    }
-  }, [isInView]);
-
-  console.log("isInView<<<<", isInView);
+  // useEffect(() => {
+  //   if (isInView && !render) {
+  //     setRender(true);
+  //   }
+  // }, [isInView]);
 
   return (
-    <MainWrapper ref={containerRef} animate={render && "animate"} variants={container}>
-      {render && (
+    <MainWrapper ref={containerRef} animate={isInView && "animate"} variants={container}>
+      {isInView && (
         <>
           <motion.div initial={{ y: "100%" }} animate={{ y: 0 }} transition={{ duration: 2 }}>
             <Stack mb="40px" direction={"row"} justifyContent={"flex-end"} spacing={"10px"}>

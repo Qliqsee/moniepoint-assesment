@@ -11,6 +11,7 @@ export const MainWrapper = styled(motion.div)`
   height: 156px;
   color: ${colors.black};
   padding: 20px 0;
+  z-index: 100;
 `;
 export const InnerWrapper = styled(Stack)`
   width: 85%;

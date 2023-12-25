@@ -20,13 +20,13 @@ const Section1 = () => {
   const containerRef = useRef(null);
   const isInView = useInView(containerRef, { margin: "-100px" });
 
-  const [render, setRender] = useState(false);
+  // const [render, setRender] = useState(false);
 
-  useEffect(() => {
-    if (isInView && !render) {
-      setRender(true);
-    }
-  }, [isInView]);
+  // useEffect(() => {
+  //   if (isInView && !render) {
+  //     setRender(true);
+  //   }
+  // }, [isInView]);
 
   const moveToSection2 = () => {
     const section2 = document.getElementById("section-2");
@@ -34,8 +34,8 @@ const Section1 = () => {
   };
 
   return (
-    <MainWrapper ref={containerRef} animate={render && "animate"} variants={container}>
-      {render && (
+    <MainWrapper ref={containerRef} animate={isInView && "animate"} variants={container}>
+      {isInView && (
         <>
           <InnerWrapper>
             <ContentWrapper>
