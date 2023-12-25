@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import { colors } from "../../styles/colors";
-import { Stack } from "@mui/material";
 
 export const MainWrapper = styled(motion.div)`
   width: 100vw;

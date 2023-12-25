@@ -5,10 +5,13 @@ const variants = {
   initial: { scale: 0, rotate: "-50deg", transition: { duration: 0.5 } },
   animate: { scale: 1, rotate: "0deg", transition: { duration: 0.5, delay: 1 } },
 };
-
-const SocialIcons = () => {
+interface Props {
+  isSection3?: boolean;
+}
+const SocialIcons = ({ isSection3 }: Props) => {
   return (
     <MainWrapper
+      isSection3={isSection3}
       transition={{
         ease: "easeInOut",
         duration: 1,

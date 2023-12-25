@@ -81,7 +81,7 @@ const Section3 = () => {
               {showFooter && (
                 <>
                   <Footer />
-                  <SocialIcons />
+                  <SocialIcons isSection3 />
                 </>
               )}
             </MainWrapper>

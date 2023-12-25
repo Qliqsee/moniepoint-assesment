@@ -1,8 +1,7 @@
 import { CircularWrapper, Container, FlexRow, LogoText, LogoWrapper, MainWrapper, Pill, Pill2 } from "./style";
-import { IconWithText } from "./Reusable";
 import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import { colors } from "../../styles/colors";
-import { ArrowArcLeft, ArrowLeft, Tooth } from "@phosphor-icons/react";
+import { ArrowLeft, Tooth } from "@phosphor-icons/react";
 import {
   AssistancePillVariant,
   DentalPillVariant,

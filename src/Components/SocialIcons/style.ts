@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 
-export const MainWrapper = styled(motion.div)`
+export const MainWrapper = styled(motion.div)<{ isSection3?: boolean }>`
   position: absolute;
-  right: 100px;
+  right: ${({ isSection3 }) => (isSection3 ? "50px" : "100px")};
   bottom: 90px;
   display: flex;
   justify-content: center;

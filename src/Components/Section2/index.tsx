@@ -16,7 +16,7 @@ import Footer from "../Footer";
 import SocialIcons from "../SocialIcons";
 import { Atom, Fan, Hourglass, Play, Plus, Tooth } from "@phosphor-icons/react";
 import { colors } from "../../styles/colors";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import {
   AssistanceIconVariant,
   AssistancePillVariant,
@@ -47,14 +47,6 @@ import {
 const Section2 = () => {
   const containerRef = useRef(null);
   const isInView = useInView(containerRef, { margin: "-100px" });
-
-  // const [render, setRender] = useState(false);
-
-  // useEffect(() => {
-  //   if (isInView && !render) {
-  //     setRender(true);
-  //   }
-  // }, [isInView]);
 
   return (
     <MainWrapper ref={containerRef} animate={isInView && "animate"} variants={container}>
