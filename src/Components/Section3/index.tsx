@@ -21,10 +21,15 @@ const container = {
 const Section3 = () => {
   const containerRef = useRef(null);
   const [showFooter, setShowFooter] = useState(false);
+  const [render, setRender] = useState(false);
   const isInView = useInView(containerRef, { margin: "-100px" });
 
   useEffect(() => {
-    if (!isInView) return;
+    if (render && !isInView) {
+      setRender(false);
+      return;
+    }
+    setRender(true);
     setTimeout(() => {
       setShowFooter(true);
     }, 4500);
@@ -32,8 +37,8 @@ const Section3 = () => {
 
   return (
     <Box ref={containerRef} width={"100%"} height={"100%"}>
-      <RootWrapper initial={{ y: "200%" }} animate={isInView && { y: 0 }} transition={{ duration: 2, delay: 2 }}>
-        {isInView && (
+      <RootWrapper initial={{ y: "200%" }} animate={render && { y: 0 }} transition={{ duration: 2, delay: 2 }}>
+        {render && (
           <>
             {" "}
             <MainWrapper variants={container}>
